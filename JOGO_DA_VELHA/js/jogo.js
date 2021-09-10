@@ -1,22 +1,15 @@
-var tempo = 0
+let tabuleiro = ['', '', '', '', '', '', '', '', '']
+let vez = 0
+let simbolo = ['x' , 'o']
 
-var mudaCor = setInterval(function () {
-    if(tempo === 1 ){
-        document.getElementById("titulo").style.color = 'saddlebrown'
-    }else if(tempo === 2 ){
-        document.getElementById("titulo").style.color = 'blue'
+function movimentando(posicao){
+    if(tabuleiro[posicao] == ''){
+        tabuleiro[posicao] = simbolo[vez]
+
+        if(vez == 0){
+            vez = 1
+        }else{
+            vez = 0
+        }
     }
-    else if(tempo === 3){   
-        document.getElementById("titulo").style.color = 'lightcoral'
-    }else if(tempo === 4){  
-        document.getElementById("titulo").style.color = 'cadetblue'
-    }else if(tempo === 5){
-        document.getElementById("titulo").style.color = 'red'
-    }
-    else if(tempo === 6){
-        document.getElementById("titulo").style.color = 'pink'
-        tempo = 0
-    }
-    tempo += 1
-    },500)
-tempo += 1
+}
