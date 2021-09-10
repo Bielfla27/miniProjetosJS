@@ -13,6 +13,35 @@ h1{
     display: inline-block;
 }
 
+.o{
+    position: relative; /* agr o position absolute ver esse como "pai" */
+}
+
+.o:after{
+    position: absolute;
+    content: "\2B55";
+    font-size: 40px;
+    line-height: 70px;
+    left: 0;
+    right: 0;
+    left: 0;
+    right: 0;
+}
+
+.x{
+    position: relative; /* agr o position absolute ver esse como "pai" */
+}
+
+.x:after{
+    position: absolute;
+    content: "\274C";
+    font-size: 40px;
+    line-height: 70px;
+    left: 0;
+    right: 0;
+    left: 0;
+    right: 0;
+}
 
 
 
