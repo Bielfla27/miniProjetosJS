@@ -13,22 +13,19 @@ function click(event){
     let quadrado = event.target
     let posicao = quadrado.id
 
-    movimentando(posicao)
-    colocandoPeca();
+    if(movimentando(posicao)){
+        setTimeout(function(){ 
+            alert("O jogo acabou");
+         }, 10);
+
+    }
+    colocandoPeca(posicao);
 }
 
-function colocandoPeca() {
-    let quadrados = document.querySelectorAll(".quadrado")
-
-    quadrados.forEach((quadrado) => {
-        let posicao = quadrado.id
-        let simbolo = tabuleiro[posicao]
-        if(simbolo != ''){
-            quadrado.innerHTML = `<div class='${simbolo}'></div>` 
-              
-        }
-
-    } ) 
+function colocandoPeca(posicao) {
+    let quadrado = document.getElementById(posicao.toString())
+    let simbolo = tabuleiro[posicao]
+    quadrado.innerHTML = `<div class='${simbolo}'></div>`    
 }
 
 
